@@ -1,3 +1,4 @@
+import Navigation from '@/components/navigation'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +13,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='p-5'>
+        <div className="relative">
+          <Navigation />
+          <div className="py-10">
+            <div className="block max-w-[38rem] mx-auto">
+              {children}
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
